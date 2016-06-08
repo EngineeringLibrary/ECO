@@ -27,4 +27,5 @@ script:
   - ../cmake-3.4.3-Linux-x86_64/bin/cmake --build .
 
 after_success:
+  - make
   - make test
