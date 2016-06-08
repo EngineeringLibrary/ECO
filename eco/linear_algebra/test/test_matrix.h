@@ -60,6 +60,17 @@ public:
         TS_ASSERT_DELTA(M1(1, 3), 3.45, 0.01);
 
     }
+
+    void test_error_access_undefined_matrix_index(void) {
+
+        TS_TRACE("ACCESSING UNDEFINED INDEX(2,1) IN MATRIX 1X3");
+
+        LinAlg::Matrix<int> M1 = "1, 2, 3";
+
+        TS_ASSERT_THROWS_ANYTHING(M1(2,1));
+
+    }
+    
 };
 
 #define ENGINEERING_CTRL_OPTIMIZE_LIB_TEST_MATRIX_H
